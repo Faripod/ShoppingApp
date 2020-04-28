@@ -3,7 +3,7 @@ import { Subject } from 'rxjs';
 
 import { Recipe } from './recipe.model';
 import { Ingredient } from '../shared/ingredient-model';
-import { ShoppingListService } from '../shopping-list/shooping-list.service';
+import { ShoppingListService } from '../shopping-list/shopping-list.service';
 
 @Injectable()
 export class RecipeService {
@@ -41,6 +41,6 @@ export class RecipeService {
   }
 
   addIngredientsToShoppingList (ingredients: Ingredient[]) {
-    this.slService.addingredients(ingredients);
+    this.slService.addIngredients(ingredients);
   }
 }
