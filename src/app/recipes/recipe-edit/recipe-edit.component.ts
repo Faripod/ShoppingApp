@@ -43,7 +43,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   onAddIngredient() {
-    (<FormArray>this.recipeForm.get('ingredients')).push(new FormGroup({
+    (<FormArray> this.recipeForm.get('ingredients')).push(new FormGroup({
       name: new FormControl(null, Validators.required),
       amount: new FormControl(null, [
         Validators.required,
@@ -53,7 +53,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   onDeleteIngredient(index: number) {
-    (<FormArray>this.recipeForm.get('ingredients')).removeAt(index);
+    (<FormArray> this.recipeForm.get('ingredients')).removeAt(index);
   }
 
   private initForm() {
@@ -89,7 +89,7 @@ export class RecipeEditComponent implements OnInit {
   }
 
   get controls() { // a getter!
-    return (<FormArray>this.recipeForm.get('ingredients')).controls;
+    return (<FormArray> this.recipeForm.get('ingredients')).controls;
   }
 
   onCancel() {
